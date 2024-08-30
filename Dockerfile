@@ -11,6 +11,9 @@ WORKDIR /code
 # Copy the current directory contents into the container at /code
 COPY . /code/
 
+# copy the requirements file into the container
+COPY requirements.txt /code/
+
 # Install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
